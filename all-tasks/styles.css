@@ -59,3 +59,77 @@ a:hover {
 #this-weeks-tasks > h2:hover, #Coming-up-tasks > h2:hover {
     color: #C0C0C0;
 }
+
+
+.task-card {
+    background-color: #2A2A2C;
+    padding: 15px;
+    margin: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    justify-content: center;
+    width: 700px;
+}
+
+
+input, button {
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+input {
+    background-color: #333;
+    color: #F2F2F2;
+}
+
+button {
+    background-color: #00E5C3;
+    color: #1C1C1E;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #90c0d1;
+}
+
+#previous-tasks {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .task-card.readonly {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 16px 20px;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease;
+  }
+  
+  .task-card.readonly:hover {
+    transform: scale(1.01);
+    border-color: #00E5C3;
+  }
+  
+  .task-card.readonly .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .task-card.readonly .item {
+    flex: 1 1 45%;
+    margin-bottom: 8px;
+  }
+  
+  .task-card.readonly .item strong {
+    color: #cfcfff;
+  }
+  

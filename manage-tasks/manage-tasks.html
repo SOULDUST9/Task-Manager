@@ -19,12 +19,23 @@
         <div id="app-wrapper">
             <div id="this-weeks-tasks">
                 <h2>Add Tasks</h2>
-                <div id="task">
-                    <input type="text" id="catagory" > 
-                    <input type="text" id="task">
+                <div class="task-card">
+                    <input type="text" id="category" placeholder="Category">
+                    <input type="text" id="task-name" placeholder="Task Name">
                     <input type="date" id="start-date">
                     <input type="date" id="due-date">
-                    <button id="remove">Remove</button>
+                    <button class="add-btn" id="add-btn">Add</button>
+                    <button class="remove-btn">Remove</button>
+                </div>
+            </div>
+            <div id="this-weeks-tasks">
+                <h2>Tasks</h2>
+                <div class="task-card">
+                    <input type="text" id="category" placeholder="Category">
+                    <input type="text" id="task-name" placeholder="Task Name">
+                    <input type="date" id="start-date">
+                    <input type="date" id="due-date">
+                    <button class="upd-btn" id="upd-btn">Update</button>
                 </div>
             </div>
         </div>
