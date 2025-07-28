@@ -59,3 +59,35 @@ a:hover {
 #this-weeks-tasks > h2:hover, #Coming-up-tasks > h2:hover {
     color: #C0C0C0;
 }
+
+
+.task-card {
+    background-color: #2A2A2C;
+    padding: 15px;
+    margin: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+
+input, button {
+    margin: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    border: none;
+}
+
+input {
+    background-color: #333;
+    color: #F2F2F2;
+}
+
+button {
+    background-color: #00E5C3;
+    color: #1C1C1E;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #90c0d1;
+}
