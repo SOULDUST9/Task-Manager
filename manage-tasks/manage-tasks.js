@@ -10,7 +10,6 @@ const clearButton = document.getElementById("clr-btn");
 
 const today = new Date().toISOString().split("T")[0];
 
-StartDate.min = today;
 EndDate.min = today;
 StartDate.value = today;
 EndDate.value = today;
@@ -70,6 +69,7 @@ function showTasks() {
             <input type="date" class="edit-start-date" value="${task.startDate}">
             <input type="date" class="edit-due-date" value="${task.dueDate}">
             <button class="update-btn" data-index="${index}">Update</button>
+            <button class="remove-btn" data-index="${index}">Remove</button>
         `;
 
         taskContainer.appendChild(card);
@@ -85,6 +85,13 @@ function showTasks() {
             tasks[this.dataset.index] = updatedTask;
             localStorage.setItem("tasks", JSON.stringify(tasks));
 
+            showTasks();
+        });
+
+        const removebtn = card.querySelector(".remove-btn");
+        removebtn.addEventListener("click", function(){
+            tasks.splice(index, 1);
+            localStorage.setItem("tasks", JSON.stringify(tasks));
             showTasks();
         });
     });

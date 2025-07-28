@@ -46,7 +46,7 @@ a:hover {
     color: #90c0d1;
 }
 
-#this-weeks-tasks > h2 , #Coming-up-tasks > h2  {
+.weeks > h2  {
     text-align: left;
     margin: 20px;
     font-size: 2rem;
@@ -56,7 +56,7 @@ a:hover {
     transition: color 0.3s ease;
 }
 
-#this-weeks-tasks > h2:hover, #Coming-up-tasks > h2:hover {
+.weeks > h2:hover {
     color: #C0C0C0;
 }
 
@@ -93,4 +93,40 @@ button {
 
 button:hover {
     background-color: #90c0d1;
+}
+
+
+.task-card.readonly {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 16px 20px;
+    color: #f0f0f0;
+    font-family: 'Segoe UI', sans-serif;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease;
+}
+
+.task-card.readonly:hover {
+    transform: scale(1.01);
+    border-color: #00E5C3;
+}
+
+.task-card.readonly .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.task-card.readonly .item {
+    flex: 1 1 45%;
+    margin-bottom: 8px;
+}
+
+.task-card.readonly .item strong {
+    color: #cfcfff;
+}
+
+p { 
+    margin: 10px;
 }

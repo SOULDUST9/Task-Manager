@@ -93,6 +93,7 @@ button {
 
 button:hover {
     background-color: #90c0d1;
+    transform: scale(1.04);
 }
 
 
@@ -116,7 +117,7 @@ button:hover {
     font-size: 1.2rem;            
     font-weight: 500;             
     text-align: center;
-    margin: 0 auto;               
+    margin: 25px auto;               
     background: rgba(255, 255, 255, 0.05); 
     padding: 10px 15px;      
     border-radius: 6px;         
