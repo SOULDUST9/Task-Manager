@@ -46,7 +46,7 @@ a:hover {
     color: #90c0d1;
 }
 
-#this-weeks-tasks > h2 , #Coming-up-tasks > h2  {
+#add-tasks > h2, #tasks > h2{
     text-align: left;
     margin: 20px;
     font-size: 2rem;
@@ -56,7 +56,7 @@ a:hover {
     transition: color 0.3s ease;
 }
 
-#this-weeks-tasks > h2:hover, #Coming-up-tasks > h2:hover {
+#add-tasks > h2:hover, #tasks > h2:hover, #clear-section > h2:hover{
     color: #C0C0C0;
 }
 
@@ -93,4 +93,33 @@ button {
 
 button:hover {
     background-color: #90c0d1;
+}
+
+
+
+
+#clear-section {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    flex-direction: column;
+}
+
+#clr-btn {
+    width: 200px;
+    margin: 10px;
+    font-size: 18px;
+}
+
+#no-found-tasks {   
+    width: 300px;         
+    font-size: 1.2rem;            
+    font-weight: 500;             
+    text-align: center;
+    margin: 0 auto;               
+    background: rgba(255, 255, 255, 0.05); 
+    padding: 10px 15px;      
+    border-radius: 6px;         
+    border: 1px solid rgba(255, 255, 255, 0.1); 
+    
 }

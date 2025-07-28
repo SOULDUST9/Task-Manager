@@ -69,7 +69,7 @@ a:hover {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     display: flex;
     justify-content: center;
-    width: 700px;
+    width: 800px;
 }
 
 
@@ -131,5 +131,8 @@ button:hover {
   
   .task-card.readonly .item strong {
     color: #cfcfff;
+  }
+  p { 
+    margin: 10px;
   }
   

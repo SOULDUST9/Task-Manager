@@ -17,7 +17,7 @@
                 </nav>
             </div>
         <div id="app-wrapper">
-            <div id="this-weeks-tasks">
+            <div id="add-tasks">
                 <h2>Add Tasks</h2>
                 <div class="task-card">
                     <input type="text" id="category" placeholder="Category">
@@ -25,18 +25,15 @@
                     <input type="date" id="start-date">
                     <input type="date" id="due-date">
                     <button class="add-btn" id="add-btn">Add</button>
-                    <button class="remove-btn">Remove</button>
                 </div>
             </div>
-            <div id="this-weeks-tasks">
+            <div id="tasks">
                 <h2>Tasks</h2>
-                <div class="task-card">
-                    <input type="text" id="category" placeholder="Category">
-                    <input type="text" id="task-name" placeholder="Task Name">
-                    <input type="date" id="start-date">
-                    <input type="date" id="due-date">
-                    <button class="upd-btn" id="upd-btn">Update</button>
-                </div>
+                <div id="no-found-tasks">No tasks found.</div>
+                <div id="task-list"></div>
+            </div>
+            <div id="clear-section">
+                <button id="clr-btn">Clear All Tasks</button>
             </div>
         </div>
     </body>
