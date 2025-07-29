@@ -1,29 +1,28 @@
-
-const thisWeeksTasks = document.getElementById("this-weeks-tasks");
-const NextWeeksTasks = document.getElementById("next-weeks-tasks");
-const followingWeeksTasks = document.getElementById("upcoming-tasks");
-
-const today = new Date().toISOString().split("T")[0];
+const thisWeekList = document.getElementById("1-task-list");
+const nextWeekList = document.getElementById("2-task-list");
+const upcomingList = document.getElementById("3-task-list");
 
 function showTasks() {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
-    thisWeeksTasks.innerHTML = "";
-    NextWeeksTasks.innerHTML = "";
-    followingWeeksTasks.innerHTML = "";
+    thisWeekList.innerHTML = "";
+    nextWeekList.innerHTML = "";
+    upcomingList.innerHTML = "";
 
+    const today = new Date();
+    const endOfThisWeek = new Date(today);
+    const dayOfWeek = today.getDay();
+    const daysUntilSunday = 7 - dayOfWeek;
+    endOfThisWeek.setDate(today.getDate() + daysUntilSunday);
 
-    let daysTillNextWeek = 7 - today.getDay();
-    if (tasks.length === 0) {
-        NoElems.style.display = "block";
-        return;
-    } else {
-        NoElems.style.display = "none";
-    }
+    const endOfNextWeek = new Date(endOfThisWeek);
+    endOfNextWeek.setDate(endOfThisWeek.getDate() + 7);
 
     tasks.forEach((task, index) => {
+        const due = new Date(task.dueDate);
+
         const card = document.createElement("div");
-        card.classList.add("task-card readonly");
+        card.classList.add("task-card", "readonly");
 
         card.innerHTML = `
             <p><strong>Task:</strong> ${task.task}</p>
@@ -33,16 +32,14 @@ function showTasks() {
             <button class="complete-btn" data-index="${index}">Complete</button>
         `;
 
-        thisWeeksTasks.appendChild(card);
-
+        if (due < endOfThisWeek) {
+            thisWeekList.appendChild(card);
+        } else if (due < endOfNextWeek) {
+            nextWeekList.appendChild(card);
+        } else {
+            upcomingList.appendChild(card);
+        }
     });
 }
-
-clearButton.addEventListener("click", function(){
-    localStorage.clear();
-    showTasks();
-    
-});
-
 
 showTasks();
