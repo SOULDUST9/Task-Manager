@@ -44,6 +44,8 @@ Add.addEventListener("click", function () {
     tasks.push(newTask);
     localStorage.setItem("tasks", JSON.stringify(tasks));
 
+    alert("Task Added!");
+
     showTasks();
 });
 

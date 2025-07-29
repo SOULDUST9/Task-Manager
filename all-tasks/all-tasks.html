@@ -17,31 +17,15 @@
                 </nav>
             </div>
             <div id="app-wrapper">
-                <div id="this-weeks-tasks">
-                    <h2>This Week</h2>
-                    <div class="task-card">
-                        <input type="text" id="category" placeholder="Category">
-                        <input type="text" id="task-name" placeholder="Task Name">
-                        <input type="date" id="start-date">
-                        <input type="date" id="due-date">
-                    </div>
-                </div>
-                <div id="Coming-up-tasks">
-                    <h2>Previous Tasks</h2>
-                    <div class="task-card readonly">
-                        <p><strong>Task:</strong> Water Tomato Plants</p>
-                        <p><strong>Category:</strong> Gardening</p>
-                        <p><strong>Start Date:</strong> 2025-07-20</p>
-                        <p><strong>Due Date:</strong> 2025-07-21</p>
-                      </div>
-                    
-                      <div class="task-card readonly">
-                        <p><strong>Task:</strong> Inspect Ventilation</p>
-                        <p><strong>Category:</strong> Maintenance</p>
-                        <p><strong>Start Date:</strong> 2025-07-19</p>
-                        <p><strong>Due Date:</strong> 2025-07-22</p>
-                      </div>
-                </div>
+                <div class="header">
+                    <button id="prev">&#8592;</button>
+                    <h2 id="month-year"></h2>
+                    <button id="next">&#8594;</button>
+                  </div>
+                  <div class="weekdays">
+                    <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+                  </div>
+                  <div id="days" class="days"></div>
             </div>
     </body>
     <script src="all-tasks.js"></script>

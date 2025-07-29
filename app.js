@@ -12,6 +12,7 @@ function showTasks() {
     pastWeeksList.innerHTML = "";
 
     const today = new Date();
+    today.setDate(today.getDate() - 1);
     const endOfThisWeek = new Date(today);
     const dayOfWeek = today.getDay();
     const daysUntilSunday = 7 - dayOfWeek;
@@ -51,6 +52,7 @@ function showTasks() {
         completebtn.addEventListener("click", function(){
             tasks.splice(index, 1);
             localStorage.setItem("tasks", JSON.stringify(tasks));
+            alert("Congradulations, Task completed!");
             showTasks();
         });
     });

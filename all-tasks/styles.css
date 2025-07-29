@@ -95,44 +95,40 @@ button:hover {
     background-color: #90c0d1;
 }
 
-#previous-tasks {
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
 
-.task-card.readonly {
-    background-color: #1e1e1e;
-    border: 1px solid #333;
-    border-radius: 12px;
-    padding: 16px 20px;
-    color: #f0f0f0;
-    font-family: 'Segoe UI', sans-serif;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
-    transition: transform 0.2s ease;
+.calendar {
+    width: 300px;
+    background: white;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    border-radius: 10px;
 }
-
-.task-card.readonly:hover {
-    transform: scale(1.01);
-    border-color: #00E5C3;
-}
-
-.task-card.readonly .row {
+  
+.header {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    align-items: center;
 }
-
-.task-card.readonly .item {
-    flex: 1 1 45%;
-    margin-bottom: 8px;
+  
+.weekdays, .days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    margin-top: 10px;
 }
-
-.task-card.readonly .item strong {
-    color: #cfcfff;
+  
+.weekdays div {
+    text-align: center;
+    font-weight: bold;
 }
-
-p { 
-    margin: 10px;
+  
+.days div {
+    text-align: center;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+  
+.days div:hover {
+    background: #e0e0e0;
 }

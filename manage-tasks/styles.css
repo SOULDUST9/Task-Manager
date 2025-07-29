@@ -16,7 +16,6 @@ buttons: #00E5C3 hover: #90c0d1
 
 body {
     background: linear-gradient(#2d2d30,#1C1C1E);
-    height: 100vh;
 }
 
 
@@ -75,6 +74,7 @@ body {
 
 .task-card:hover{
     transform: scale(1.01);
+    border: #00E5C3;
 }
 
 input, button {
