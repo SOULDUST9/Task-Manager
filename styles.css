@@ -16,7 +16,6 @@ buttons: #00E5C3 hover: #90c0d1
 
 body {
     background: linear-gradient(#2d2d30,#1C1C1E);
-    height: 100vh;
 }
 
 .container {
@@ -59,14 +58,16 @@ body {
 .weeks > h2:hover {
     color: #C0C0C0;
 }
-
+/*
+rgba(0,0,0,0.2)
+ */
 
 .task-card {
     background-color: #2A2A2C;
     padding: 15px;
     margin: 15px 20px;
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
     display: flex;
     justify-content: center;
     width: 1000px;
@@ -75,7 +76,7 @@ body {
 
 input, button {
     margin: 5px;
-    padding: 8px;
+    padding: 9px;
     border-radius: 5px;
     border: none;
 }
@@ -93,11 +94,12 @@ button {
 
 button:hover {
     background-color: #90c0d1;
+    transform: scale(1.04);
 }
 
 
 .task-card.readonly {
-    background-color: #1e1e1e;
+    background-color: #232323;
     border: 1px solid #333;
     border-radius: 12px;
     padding: 16px 20px;
@@ -105,6 +107,7 @@ button:hover {
     font-family: 'Segoe UI', sans-serif;
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     transition: transform 0.2s ease;
+    font-size: 17px;
 }
 
 .task-card.readonly:hover {
@@ -129,4 +132,10 @@ button:hover {
 
 p { 
     margin: 20px;
+}
+#app-footer > p {
+    text-decoration: underline 2px solid #B388FF;
+    text-underline-offset: 8px;
+    margin: 20px 0 10px 0;
+    text-align: center;
 }
