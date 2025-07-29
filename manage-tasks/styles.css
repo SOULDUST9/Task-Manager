@@ -73,6 +73,9 @@ body {
     width: 800px;
 }
 
+.task-card:hover{
+    transform: scale(1.01);
+}
 
 input, button {
     margin: 5px;
