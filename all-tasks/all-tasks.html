@@ -12,21 +12,27 @@
                 <h1 class="name">Task Manager</h1>
                 <nav class="nav">
                     <a href="../index.html">Home</a>
-                    <a href="all-tasks.html">View All Tasks</a>
+                    <a href="all-tasks.html">View Calendar</a>
                     <a href="../manage-tasks/manage-tasks.html">Manage Tasks</a>
                 </nav>
             </div>
-            <div id="app-wrapper">
-                <div class="header">
-                    <button id="prev">&#8592;</button>
-                    <h2 id="month-year"></h2>
-                    <button id="next">&#8594;</button>
-                  </div>
-                  <div class="weekdays">
-                    <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
-                  </div>
-                  <div id="days" class="days"></div>
+        </header>
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button class="nav-arrow" id="prev-month">&#8592;</button>
+                <div class="month-year">
+                <div class="month">August</div>
+                <div class="year">2025</div>
+                </div>
+                <button class="nav-arrow" id="next-month">&#8594;</button>
             </div>
+        
+            <div class="calendar-weekdays">
+                <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+            </div>
+        
+            <div class="calendar-days"></div>
+        </div>
     </body>
     <script src="all-tasks.js"></script>
 </html>
