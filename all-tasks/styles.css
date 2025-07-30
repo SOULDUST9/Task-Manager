@@ -97,14 +97,14 @@ html, body {
     text-align: center;
 }
 
-.calendar-weekdays div {
+.calendar-weekdays > div {
     font-weight: bold;
     color: #F2F2F2;
     padding-bottom: 10px;
     border-bottom: 1px solid #444;
 }
 
-.calendar-days div {
+.calendar-days > div {
     padding: 12px 0;
     margin-top: 10px;
     border: black solid 1px;
@@ -113,7 +113,7 @@ html, body {
     font-weight: 500;
 }
 
-.calendar-days div:hover {
+.calendar-days > div:hover {
     background-color: #3a3a3d;
     cursor: pointer;
 }
@@ -140,13 +140,13 @@ html, body {
     cursor: pointer;
 }
   
-.xday p {
+.xday > p {
     font-weight: bold;
     color: #F2F2F2;
     margin-bottom: 6px;
 }
 
-.xday p:not(:first-child) {
+.xday > p:not(:first-child) {
     background: rgba(255, 255, 255, 0.1); 
     border-radius: 5px;
     padding: 3px 5px;
@@ -173,13 +173,46 @@ html, body {
     cursor: pointer;
 }
   
-.day p {
+.day > p {
     font-weight: bold;
     color: #F2F2F2;
     margin-bottom: 6px;
 }
   
-.day p:not(:first-child) {
+.day > p:not(:first-child) {
+    background: rgba(255, 255, 255, 0.1); 
+    border-radius: 5px;
+    padding: 3px 5px;
+    font-weight: 500;
+    text-align: left;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.notday {
+    background-color: #37373a;
+    padding: 12px;
+    border-radius: 10px;
+    min-height: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    transition: background 0.3s;
+}
+  
+.notday:hover {
+    background-color: #3a3a3d;
+    cursor: pointer;
+}
+  
+.notday > p {
+    font-weight: bold;
+    color: #F2F2F2;
+    margin-bottom: 6px;
+}
+  
+.notday > p:not(:first-child) {
     background: rgba(255, 255, 255, 0.1); 
     border-radius: 5px;
     padding: 3px 5px;

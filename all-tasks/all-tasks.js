@@ -34,19 +34,46 @@ const checkDay = (day) => {
         return false;
     }
 }
+const specialCheckDay = (day) => {
+    if (todaysMonth + 1 == currentMonth && todaysYear == currentYear && todaysDay == day){
+        return true;
+    }else{ 
+        return false;
+    }
+}
 
 const loadDays = () => {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     const daysInMonth = new Date(currentYear, currentMonth + 1, 0).getDate();
+
+    const prevMonth = currentMonth === 0 ? 11 : currentMonth - 1;
+    const prevYear = currentMonth === 0 ? currentYear - 1 : currentYear;
+    const prevDaysInMonth = new Date(prevYear, prevMonth + 1, 0).getDate();
 
     daysContainer.innerHTML = "";
 
     const firstDay = new Date(currentYear, currentMonth, 1).getDay(); 
 
     for (let x = 0; x < firstDay; x++) {
+
         const emptyCard = document.createElement("div");
-        emptyCard.classList.add("day");
-        emptyCard.innerHTML = `<p></p>`;
+        const prevDayNumber = prevDaysInMonth - (firstDay - 1) + x;
+
+
+        if (specialCheckDay(prevDayNumber, prevMonth, prevYear)) {
+            emptyCard.classList.add("xday");
+        } else {
+            emptyCard.classList.add("notday");
+        }
+        emptyCard.innerHTML = `<p>${prevDayNumber}</p>`;
+
+        tasks.forEach((task) => {
+            const dueDate = new Date(task.dueDate);
+            if (dueDate.getFullYear() === prevYear && dueDate.getMonth() === prevMonth && dueDate.getDate() === prevDayNumber - 1) {
+                emptyCard.innerHTML += `<p>${task.category}: ${task.task}</p>`;
+            }
+        });
+
         daysContainer.appendChild(emptyCard);
     }
 
