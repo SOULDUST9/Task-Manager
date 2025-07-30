@@ -123,3 +123,10 @@ button:hover {
     border: 1px solid rgba(255, 255, 255, 0.1); 
     
 }
+
+#app-footer > p {
+    text-decoration: underline 2px solid #B388FF;
+    text-underline-offset: 8px;
+    margin: 20px 0 10px 0;
+    text-align: center;
+}
