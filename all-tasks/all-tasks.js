@@ -41,6 +41,15 @@ const loadDays = () => {
 
     daysContainer.innerHTML = "";
 
+    const firstDay = new Date(currentYear, currentMonth, 1).getDay(); 
+
+    for (let x = 0; x < firstDay; x++) {
+        const emptyCard = document.createElement("div");
+        emptyCard.classList.add("day");
+        emptyCard.innerHTML = `<p></p>`;
+        daysContainer.appendChild(emptyCard);
+    }
+
     for(let i = 1; i <= daysInMonth; i++){
         const card = document.createElement("div");
         if (checkDay(i)){
@@ -48,6 +57,7 @@ const loadDays = () => {
         }else {
             card.classList.add("day");
         }
+
         card.innerHTML = `
             <p>${i}</p>
         `;
