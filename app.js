@@ -56,6 +56,29 @@ function showTasks() {
             showTasks();
         });
     });
+
+    if (pastWeeksList.innerHTML == "") {
+        appendEmptyMessage(pastWeeksList);
+    }
+    
+    if (thisWeekList.innerHTML == "") {
+        appendEmptyMessage(thisWeekList);
+    }
+    
+    if (nextWeekList.innerHTML == "") {
+        appendEmptyMessage(nextWeekList);
+    }
+    
+    if (upcomingList.innerHTML == "") {
+        appendEmptyMessage(upcomingList);
+    }
+}
+
+const appendEmptyMessage = (container) => {
+    const emptyCard = document.createElement("div");
+    emptyCard.classList.add("task-card", "readonly");
+    emptyCard.innerHTML = `<p>No Task Found.</p>`;
+    container.appendChild(emptyCard);
 }
 
 showTasks();
