@@ -17,24 +17,32 @@
                 </nav>
             </div>
         </header>
-        <div id="app-wrapper">
-            <div class="weeks" id="past-weeks-tasks">
-                <h2>Past Due Tasks</h2>
-                <div id="0-task-list"></div>
+        <div id="task-container">
+            <div class="task-column">
+                <div class="about-cardx">
+                    <h3 class="title">Past Due Tasks</h3>
+                    <ul id="0-task-list"></ul>
+                </div>
+            
+                <div class="about-cardx">
+                    <h3 class="title">This Week's Tasks</h3>
+                    <ul id="1-task-list"></ul>
+                </div>
             </div>
-            <div class="weeks" id="this-weeks-tasks">
-                <h2>This Weeks Tasks</h2>
-                <div id="1-task-list"></div>
-            </div>
-            <div class="weeks" id="next-weeks-tasks">
-                <h2>Next Weeks Tasks</h2>
-                <div id="2-task-list"></div>
-            </div>
-            <div class="weeks" id="upcoming-tasks">
-                <h2>Upcoming weeks Tasks</h2>
-                <div id="3-task-list"></div>
+            
+            <div class="task-column">
+                <div class="about-cardx">
+                    <h3 class="title">Next Week's Tasks</h3>
+                    <ul id="2-task-list"></ul>
+                </div>
+            
+                <div class="about-cardx">
+                    <h3 class="title">Upcoming Weeks' Tasks</h3>
+                    <ul id="3-task-list"></ul>
+                </div>
             </div>
         </div>
+        
         <footer id="app-footer">
             <p>© Sebastian's Task Manager</p>
         </footer> 

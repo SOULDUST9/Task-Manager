@@ -50,7 +50,7 @@ html, body {
     width: 90%;
     max-width: 1200px;
     border-radius: 16px;
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 10px rgba(95, 209, 255, 0.2);
 }
 
 .calendar-header {
@@ -138,6 +138,7 @@ html, body {
 .xday:hover {
     background-color: #3a3a3d;
     cursor: pointer;
+    transform: translateY(-4px);
 }
   
 .xday > p {
@@ -171,6 +172,7 @@ html, body {
 .day:hover {
     background-color: #3a3a3d;
     cursor: pointer;
+    transform: translateY(-4px);
 }
   
 .day > p {
@@ -204,6 +206,7 @@ html, body {
 .notday:hover {
     background-color: #3a3a3d;
     cursor: pointer;
+    transform: translateY(-4px);
 }
   
 .notday > p {

@@ -24,8 +24,7 @@ function showTasks() {
     tasks.forEach((task, index) => {
         const due = new Date(task.dueDate);
 
-        const card = document.createElement("div");
-        card.classList.add("task-card", "readonly");
+        const card = document.createElement("li");
 
         card.innerHTML = `
             <p><strong>Category:</strong> ${task.category}</p>
@@ -75,8 +74,7 @@ function showTasks() {
 }
 
 const appendEmptyMessage = (container) => {
-    const emptyCard = document.createElement("div");
-    emptyCard.classList.add("task-card", "readonly");
+    const emptyCard = document.createElement("li");
     emptyCard.innerHTML = `<p>No Task Found.</p>`;
     container.appendChild(emptyCard);
 }
