@@ -11,37 +11,39 @@
             <div class="container">
                 <h1 class="name">Task Manager</h1>
                 <nav class="nav">
-                    <a href="index.html">Home</a>
-                    <a href="all-tasks/all-tasks.html">View Calendar</a>
-                    <a href="manage-tasks/manage-tasks.html">Manage Tasks</a>
+                    <a href="index.html" id="CurrentPage">Home</a>
+                    <a href="all-tasks/all-tasks.html" id="NotCurrentPage">View Calendar</a>
+                    <a href="manage-tasks/manage-tasks.html" id="NotCurrentPage">Manage Tasks</a>
                 </nav>
             </div>
         </header>
         <div id="task-container">
             <div class="task-column">
-                <div class="about-cardx">
-                    <h3 class="title">Past Due Tasks</h3>
+                <div class="about-cardx" id="a">
+                    <h3 class="title">Overdue </h3>
                     <ul id="0-task-list"></ul>
                 </div>
             
-                <div class="about-cardx">
-                    <h3 class="title">This Week's Tasks</h3>
+                <div class="about-cardx" id="b">
+                    <h3 class="title" id="ThisWeeksDays">This Week: </h3>
                     <ul id="1-task-list"></ul>
                 </div>
             </div>
             
             <div class="task-column">
-                <div class="about-cardx">
-                    <h3 class="title">Next Week's Tasks</h3>
+                <div class="about-cardx" id="c">
+                    <h3 class="title" id="NextWeeksDays">Next Week: <small id="NextWeeksDays"></small></h3>
                     <ul id="2-task-list"></ul>
                 </div>
             
-                <div class="about-cardx">
-                    <h3 class="title">Upcoming Weeks' Tasks</h3>
+                <div class="about-cardx" id="d">
+                    <h3 class="title" id="UpcomingWeeksDays">Upcoming: </h3>
                     <ul id="3-task-list"></ul>
                 </div>
             </div>
         </div>
+        
+        
         
         <footer id="app-footer">
             <p>© Sebastian's Task Manager</p>

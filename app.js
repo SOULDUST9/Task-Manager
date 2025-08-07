@@ -3,6 +3,12 @@ const thisWeekList = document.getElementById("1-task-list");
 const nextWeekList = document.getElementById("2-task-list");
 const upcomingList = document.getElementById("3-task-list");
 
+const days1 = document.getElementById("ThisWeeksDays");
+const days2 = document.getElementById("NextWeeksDays");
+const days3 = document.getElementById("UpcomingWeeksDays");
+
+const Months = ["Jan", "Feb", "Mar", "Apr", "May", "June", "July", "Aug", "Sept", "Oct", "Nov", "Dec"];
+
 function showTasks() {
     const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
 
@@ -21,16 +27,23 @@ function showTasks() {
     const endOfNextWeek = new Date(endOfThisWeek);
     endOfNextWeek.setDate(endOfThisWeek.getDate() + 7);
 
+    const todayx = new Date();
+
+    days1.innerText =  days1.innerText + " (" + "Today" + " - " + Months[endOfThisWeek.getMonth()] + " " + endOfThisWeek.getDate() + ")";
+    days2.innerText =  days2.innerText + " (" + Months[endOfThisWeek.getMonth()] + " " + endOfThisWeek.getDate() + " - " + Months[endOfNextWeek.getMonth()] + " " + endOfNextWeek.getDate() + ")";
+    days3.innerText =  days3.innerText + " (After " + Months[endOfNextWeek.getMonth()] + " " + endOfNextWeek.getDate() + ")";
+
     tasks.forEach((task, index) => {
         const due = new Date(task.dueDate);
 
         const card = document.createElement("li");
 
         card.innerHTML = `
-            <p><strong>Category:</strong> ${task.category}</p>
-            <p><strong>Task:</strong> ${task.task}</p>
-            <p><strong>Start Date:</strong> ${task.startDate}</p>
-            <p><strong>Due Date:</strong> ${task.dueDate}</p>
+            <p><strong>${task.category}:</strong> ${task.task}</p>
+            <p>
+                ${Months[Number(task.startDate[5] + task.startDate[6]) - 1]} ${task.startDate[8] + task.startDate[9]} ${task.startDate[0] + task.startDate[1] + task.startDate[2] + task.startDate[3]}
+                 → ${Months[Number(task.dueDate[5] + task.dueDate[6]) - 1]} ${task.dueDate[8] + task.dueDate[9]} ${task.dueDate[0] + task.dueDate[1] + task.dueDate[2] + task.dueDate[3]} 
+            </p>
             <button class="complete-btn" data-index="${index}">Complete</button>
         `;
 
@@ -75,7 +88,7 @@ function showTasks() {
 
 const appendEmptyMessage = (container) => {
     const emptyCard = document.createElement("li");
-    emptyCard.innerHTML = `<p>No Task Found.</p>`;
+    emptyCard.innerHTML = `<p>No tasks here! You're all caught up.</p>`;
     container.appendChild(emptyCard);
 }
 
