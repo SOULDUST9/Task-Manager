@@ -21,11 +21,13 @@
             <div id="add-tasks">
                 <h2>Add Tasks</h2>
                 <div class="task-card">
-                    <input type="text" id="category" placeholder="Category">
-                    <input type="text" id="task-name" placeholder="Task Name">
-                    <input type="date" id="start-date">
-                    <input type="date" id="due-date">
-                    <button class="add-btn" id="add-btn">Add</button>
+                    <form>
+                        <input type="text" id="category" placeholder="Category">
+                        <input type="text" id="task-name" placeholder="Task Name">
+                        <input type="datetime-local" id="start-date" required>
+                        <input type="datetime-local" id="due-date" required>
+                        <button class="add-btn" id="add-btn">Add</button>
+                    </form>
                 </div>
             </div>
             <div id="tasks">

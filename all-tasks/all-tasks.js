@@ -91,7 +91,6 @@ const loadDays = () => {
 
         tasks.forEach((task, index) => {
             const dueDate = new Date(task.dueDate);
-            dueDate.setDate(dueDate.getDate() + 1);
             if (dueDate.getMonth() === currentMonth && dueDate.getDate() === i && dueDate.getFullYear() === currentYear){
                 card.innerHTML += `<p>${task.category}: ${task.task}</p>`;
             } 

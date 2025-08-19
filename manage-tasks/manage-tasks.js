@@ -27,7 +27,7 @@ Add.addEventListener("click", function () {
     const Sdate = StartDate.value;
     const Edate = EndDate.value;
 
-    if (cat === '' || task === '') {
+    if (cat === '' || task === '' || Sdate === '' || Edate === '') {
         alert("Please fill in ALL fields!");
         return;
     }
@@ -68,8 +68,8 @@ function showTasks() {
         card.innerHTML = `
             <input type="text" class="edit-category" value="${task.category}">
             <input type="text" class="edit-name" value="${task.task}">
-            <input type="date" class="edit-start-date" value="${task.startDate}" >
-            <input type="date" class="edit-due-date" value="${task.dueDate}">
+            <input type="datetime-local" class="edit-start-date" value="${task.startDate}" >
+            <input type="datetime-local" class="edit-due-date" value="${task.dueDate}">
             <button class="update-btn" data-index="${index}">Update</button>
             <button class="remove-btn" data-index="${index}">Remove</button>
         `;

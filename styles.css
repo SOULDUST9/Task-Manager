@@ -91,12 +91,12 @@ button:hover {
 
 .about-cardx {
     background: #2A2A2C;
-    padding: 25px 20px;
+    padding: 30px 10px;
     border-radius: 12px;
     min-height: 150px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content:flex-start;
     transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
@@ -182,10 +182,12 @@ button:hover {
     font-size: 1.075rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     opacity: 0.9;
+    gap: 1rem;
 }
 
 .about-cardx li p {
     padding: 0 5px;
+    font-size: 93%;
 }
 
 .btn-secondary {

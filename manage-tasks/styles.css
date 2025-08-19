@@ -68,7 +68,7 @@ html, body {
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     display: flex;
     justify-content: center;
-    width: 800px;
+    width: 1000px;
 }
 
 .task-card:hover{
