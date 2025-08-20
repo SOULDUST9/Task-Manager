@@ -8,13 +8,13 @@ buttons: #00E5C3 hover: #90c0d1
 
 * {
     font-family: 'Fira Sans', sans-serif;
-    color: #F2F2F2;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 html, body {
+    color: #F2F2F2;
     min-height: 100vh;                  
     background: radial-gradient(circle at top left, rgba(179,136,255,0.15), transparent 50%),
         radial-gradient(circle at bottom right, rgba(0,229,195,0.15), transparent 50%),
@@ -160,7 +160,24 @@ button:hover {
     transition: background 0.3s;
 }
   
-#CurrentPage {
+#cCurrentPage {
     color: #fff;
     font-weight: bold;
+}
+
+.btn-secondary {
+    margin: 5px;
+    padding: 9px;
+    border-radius: 20px;
+    border: none;
+    width: 120px;
+    color: #1C1C1E;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #00E5C3;
+}
+
+.btn-secondary:hover {
+    background-color: #90c0d1;
+    transform: scale(1.05);
 }

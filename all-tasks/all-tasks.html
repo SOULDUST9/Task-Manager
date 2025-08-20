@@ -11,9 +11,10 @@
             <div class="container">
                 <h1 class="name">Task Manager</h1>
                 <nav class="nav">
-                    <a href="../index.html" id="NotCurrentPage">Home</a>
-                    <a href="all-tasks.html" id="CurrentPage">View Calendar</a>
-                    <a href="../manage-tasks/manage-tasks.html" id="NotCurrentPage">Manage Tasks</a>
+                    <button class="btn-secondary" id="light-mode">Toggle Theme</button>
+                    <a href="../index.html" id="aNotCurrentPage">Home</a>
+                    <a href="all-tasks.html" id="aCurrentPage">View Calendar</a>
+                    <a href="../manage-tasks/manage-tasks.html" id="aNotCurrentPage">Manage Tasks</a>
                 </nav>
             </div>
         </header>
@@ -28,7 +29,7 @@
             </div>
         
             <div class="calendar-weekdays">
-                <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+                <div class="dates">Sun</div><div class="dates">Mon</div><div class="dates">Tue</div><div class="dates">Wed</div><div class="dates">Thu</div><div class="dates">Fri</div><div class="dates">Sat</div>
             </div>
         
             <div class="calendar-days"></div>
@@ -39,4 +40,5 @@
         </footer> 
     </body>
     <script src="all-tasks.js"></script>
+    <script src="../darkMode.js"></script>
 </html>

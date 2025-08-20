@@ -11,9 +11,10 @@
             <div class="container">
                 <h1 class="name">Task Manager</h1>
                 <nav class="nav">
+                    <button class="btn-secondary" id="light-mode">Toggle Theme</button>
                     <a href="../index.html" id="NotCurrentPage">Home</a>
                     <a href="../all-tasks/all-tasks.html" id="NotCurrentPage">View Calendar</a>
-                    <a href="manage-tasks.html" id="CurrentPage">Manage Tasks</a>
+                    <a href="manage-tasks.html" id="cCurrentPage">Manage Tasks</a>
                 </nav>
             </div>
         </header>
@@ -22,10 +23,10 @@
                 <h2>Add Tasks</h2>
                 <div class="task-card">
                     <form>
-                        <input type="text" id="category" placeholder="Category">
-                        <input type="text" id="task-name" placeholder="Task Name">
-                        <input type="datetime-local" id="start-date" required>
-                        <input type="datetime-local" id="due-date" required>
+                        <input type="text" id="category" class="xxx" placeholder="Category">
+                        <input type="text" id="task-name" class="xxx" placeholder="Task Name">
+                        <input type="datetime-local" id="start-date" class="xxx" required>
+                        <input type="datetime-local" id="due-date" class="xxx" required>
                         <button class="add-btn" id="add-btn">Add</button>
                     </form>
                 </div>
@@ -44,4 +45,5 @@
         </footer> 
     </body>
     <script src="manage-tasks.js"></script>
+    <script src="../darkMode.js"></script>
 </html>

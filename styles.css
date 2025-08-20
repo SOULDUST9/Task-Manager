@@ -1,12 +1,12 @@
 * {
     font-family: 'Fira Sans', sans-serif;
-    color: #F2F2F2;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 html, body {
+    color: #F2F2F2;
     min-height: 100vh;                    
     background: radial-gradient(circle at top left, rgba(179,136,255,0.15), transparent 50%),
         radial-gradient(circle at bottom right, rgba(0,229,195,0.15), transparent 50%),
@@ -193,28 +193,20 @@ button:hover {
 .btn-secondary {
     margin: 5px;
     padding: 9px;
-    border-radius: 5px;
+    border-radius: 20px;
     border: none;
-    width: 150px;
-    display: flex;
-    justify-content: center;
+    width: 120px;
     color: #1C1C1E;
     cursor: pointer;
     text-decoration: none;
-}
-
-.btn-secondary {
     background-color: #00E5C3;
-    margin: 5px;
-    padding: 9px;
-    border-radius: 5px;
-    border: none;
 }
 
 .btn-secondary:hover {
     background-color: #90c0d1;
     transform: scale(1.05);
 }
+
 
 #button-wrapper {
     display: flex;

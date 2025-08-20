@@ -24,7 +24,6 @@ const showMonth = () => {
     Year.textContent = currentYear;
 
     loadDays();
-
 }
 
 const checkDay = (day) => {
@@ -92,7 +91,7 @@ const loadDays = () => {
         tasks.forEach((task, index) => {
             const dueDate = new Date(task.dueDate);
             if (dueDate.getMonth() === currentMonth && dueDate.getDate() === i && dueDate.getFullYear() === currentYear){
-                card.innerHTML += `<p>${task.category}: ${task.task}</p>`;
+                card.innerHTML += `<p class="tasking">${task.category}: ${task.task}</p>`;
             } 
         });
 
@@ -114,6 +113,7 @@ prevMonth.addEventListener("click", function(){
     }
 
     showMonth();
+    display();
 });
 
 nextMonth.addEventListener("click", function(){
@@ -130,6 +130,7 @@ nextMonth.addEventListener("click", function(){
     }
     
     showMonth();
+    display();
 });
 
 

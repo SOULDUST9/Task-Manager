@@ -1,13 +1,13 @@
 
 * {
     font-family: 'Fira Sans', sans-serif;
-    color: #F2F2F2;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
 html, body {
+    color: #F2F2F2;
     min-height: 100vh;                  
     background: radial-gradient(circle at top left, rgba(179,136,255,0.15), transparent 50%),
         radial-gradient(circle at bottom right, rgba(0,229,195,0.15), transparent 50%),
@@ -42,7 +42,7 @@ html, body {
 
 
 .calendar-container {
-    background-color: #2A2A2C;
+    background: #2A2A2C;
     margin: 0px auto;
     padding: 25px 30px;
     width: 90%;
@@ -61,7 +61,6 @@ html, body {
 
 .month-year {
     text-align: center;
-    color: #B388FF;
 }
 
 .month {
@@ -248,14 +247,14 @@ html, body {
 }
 
 
-#NotCurrentPage {
+#aNotCurrentPage {
     text-decoration: none;
     color: #aaa;
     padding: 8px 12px;
     border-radius: 8px;
 }
   
-#NotCurrentPage:hover {
+#aNotCurrentPage:hover {
     background-color: #00e5c3ec;
     color: black;
     border-radius: 15px;
@@ -263,7 +262,24 @@ html, body {
     transition: background 0.3s;
 }
   
-#CurrentPage {
+#aCurrentPage {
     color: #fff;
     font-weight: bold;
+}
+
+.btn-secondary {
+    margin: 5px;
+    padding: 9px;
+    border-radius: 20px;
+    border: none;
+    width: 120px;
+    color: #1C1C1E;
+    cursor: pointer;
+    text-decoration: none;
+    background-color: #00E5C3;
+}
+
+.btn-secondary:hover {
+    background-color: #90c0d1;
+    transform: scale(1.05);
 }
