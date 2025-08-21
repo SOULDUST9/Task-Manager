@@ -88,6 +88,8 @@ function showTasks() {
             localStorage.setItem("tasks", JSON.stringify(tasks));
 
             showTasks();
+            alert("Task Updated!");
+            window.location.reload(true);
         });
 
         const removebtn = card.querySelector(".remove-btn");
@@ -95,6 +97,8 @@ function showTasks() {
             tasks.splice(index, 1);
             localStorage.setItem("tasks", JSON.stringify(tasks));
             showTasks();
+            alert("Task Removed!");
+            window.location.reload(true);
         });
     });
 }
@@ -102,8 +106,10 @@ function showTasks() {
 clearButton.addEventListener("click", function(){
     localStorage.clear();
     showTasks();
+    display();
     
 });
 
 
 showTasks();
+display();

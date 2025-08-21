@@ -115,6 +115,7 @@ function showTasks() {
             localStorage.setItem("tasks", JSON.stringify(tasks));
             alert("Congradulations, Task completed!");
             showTasks();
+            display();
         });
     });
 
